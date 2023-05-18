@@ -1,0 +1,7 @@
+plugin: gcp_compute
+projects:
+  - "gce-hadoop"
+auth_kind: serviceaccount
+keyed_groups:
+  - prefix: gcp
+    key: labels

@@ -1,0 +1,7 @@
+zone = "us-central1-a"
+
+region  = "us-central1"
+
+project  = "studious-optics-387122"
+
+key_ssh = "/home/201819060276/.ssh/id_rsa.pub"
