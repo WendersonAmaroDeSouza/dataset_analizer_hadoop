@@ -36,7 +36,6 @@ RUN apt update && \
     terraform -install-autocomplete
 
 # Ansible Instalation Steps: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-debian-11
-RUN apt update && \
-    apt install ansible
+RUN apt install -y ansible
 
 CMD ["/bin/bash"]
