@@ -9,6 +9,7 @@ services:
     - '3001:3000'
     volumes:
     - '../.:/lab-hadoop'
+    - 'C:/Users/wende/.ssh:/root/.ssh'
     working_dir: /lab-hadoop
     container_name: lab-hadoop
     environment:

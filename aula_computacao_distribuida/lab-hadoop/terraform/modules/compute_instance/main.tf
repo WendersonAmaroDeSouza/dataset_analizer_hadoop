@@ -6,7 +6,7 @@ resource "google_compute_instance" "worker" {
   labels         = { "machine" : "worker" }
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-cloud/debian-10"
     }
   }
   metadata = {
@@ -28,7 +28,7 @@ resource "google_compute_instance" "manager" {
   labels         = { "machine" = "manager" }
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-cloud/debian-10"
     }
   }
   metadata = {
