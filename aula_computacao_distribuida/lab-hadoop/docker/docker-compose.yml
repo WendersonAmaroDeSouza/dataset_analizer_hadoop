@@ -14,7 +14,7 @@ services:
     environment:
     - GCP_SERVICE_ACCOUNT_FILE=/lab-hadoop/keyfile.json
     - GOOGLE_APPLICATION_CREDENTIALS=/lab-hadoop/keyfile.json
-    command: bash -c "cd terraform && terraform init && terraform plan && terraform apply && /bin/bash" # && if [ -d "./tmp/pids" ]; then rm -f ./tmp/pids/*; fi && service redis-server start && rails s -b 0.0.0.0 && /bin/bash"
+    command: bash -c "cd terraform && /bin/bash" # && terraform init && terraform plan && terraform apply && /bin/bash" # && if [ -d "./tmp/pids" ]; then rm -f ./tmp/pids/*; fi && service redis-server start && rails s -b 0.0.0.0 && /bin/bash"
     stdin_open: true
     tty: true
     networks:

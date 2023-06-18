@@ -1,0 +1,3 @@
+/root/.ssh/id_rsa
+lab-hadoop
+lab-hadoop

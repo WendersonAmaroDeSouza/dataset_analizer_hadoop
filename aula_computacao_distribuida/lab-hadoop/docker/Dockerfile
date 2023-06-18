@@ -38,4 +38,9 @@ RUN apt update && \
 # Ansible Instalation Steps: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-debian-11
 RUN apt install -y ansible
 
+RUN apt-get update && \
+    apt-get install -y openssh-client
+
+RUN ssh-keygen -t rsa -b 4096 -f /root/.ssh/id_rsa -N "" -C "your_email@example.com"
+
 CMD ["/bin/bash"]
