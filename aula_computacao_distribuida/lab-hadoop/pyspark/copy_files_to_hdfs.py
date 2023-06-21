@@ -1,7 +1,7 @@
 import pydoop.hdfs as hdfs
 
 # Local file path
-local_file = '/lab-hadoop/twitter_dataset.csv'
+local_file = '/root/lab-hadoop/twitter_dataset.csv'
 
 # Destination path in HDFS
 hdfs_path = '/input/twitter_dataset.csv'

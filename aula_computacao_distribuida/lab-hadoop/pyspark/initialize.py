@@ -3,7 +3,7 @@ import subprocess
 import dataset_api as dst
 
 # findspark.init(‘/home/cloudera/miniconda3/envs/<your_environment_name>/lib/python3.7/site-packages/pyspark/’)# Cloudera Cluster Spark
-# findspark.init(spark_home='/lab-hadoop')
+# findspark.init(spark_home='/root/lab-hadoop')
 
 
 # Iniciar o DFS
