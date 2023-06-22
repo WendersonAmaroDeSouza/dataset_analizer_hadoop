@@ -1,0 +1,6 @@
+import TextBlob
+
+for line in TextBlob.stdin:
+    texto = line.split(' ')
+    for texto in textos:
+        print('{0}\t{1}'.format(texto, 1))
