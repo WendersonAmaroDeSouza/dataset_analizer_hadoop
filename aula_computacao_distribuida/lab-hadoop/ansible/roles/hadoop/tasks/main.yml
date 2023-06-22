@@ -10,3 +10,7 @@
 - name: "Config hadoop"
   become: yes
   import_tasks: "./config-hadoop.yml"
+
+- name: "Mapper Reducer Jobs"
+  become: yes
+  import_tasks: "./mapper-reducer-jobs.yml"

@@ -1,0 +1,6 @@
+- name: Mapper Reduccer Jobs
+  copy:
+    src: /root/lab-hadoop/mapper-reducer-jobs
+    dest: /home/hadoop/
+    remote_src: yes
+    recursive: yes
