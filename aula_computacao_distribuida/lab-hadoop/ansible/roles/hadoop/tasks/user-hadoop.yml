@@ -39,3 +39,10 @@
     path: "{{hadoop_base}}"
     group: "{{user_name}}"
     owner: "{{user_name}}"
+
+- name: "Add public SSH key to authorized_keys"
+  authorized_key:
+    user: "hadoop"
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+    state: present
+  delegate_to: "{{ ip_master }}"

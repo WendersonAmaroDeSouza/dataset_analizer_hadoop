@@ -1,11 +1,20 @@
+#!/usr/bin/python3
+# -*-coding:utf-8 -*
+
 import sys
 
 currently_word = None
 currently_count = 0
+word = None
 
 for line in sys.stdin:
+    line = line.strip()
     word, count = line.split('\t')
-    count = int(count)
+    try:
+        count = int(count)
+    except ValueError:
+        continue
+    
     if word == currently_word:
         currently_count += count
     else:

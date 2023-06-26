@@ -1,9 +1,12 @@
+- name: Format Namenode
+  become: yes
+  command: hdfs namenode -format
+  when: inventory_hostname == ip_master
+
 - name: Mapper Reduccer Jobs
   copy:
-    # src: /root/lab-hadoop/mapper-reducer-jobs
-    # dest: /home/hadoop/
-    content: "/root/lab-hadoop/mapper-reducer-jobs"
+    src: "/root/lab-hadoop/mapper-reducer-jobs"
     dest: "/home/hadoop/"
-    when: inventory_hostname = ip_master
-    remote_src: yes
-    recursive: yes
+    when: inventory_hostname == ip_master
+    # remote_src: yes
+    # recursive: yes

@@ -13,7 +13,7 @@ pip3 install requests google-auth
 chmod 700 /root/.ssh
 chmod 600 /root/.ssh/config
 chmod 600 /root/.ssh/id_rsa
-ssh-keyscan 34.123.178.200 34.134.255.54 >> /root/.ssh/known_hosts
+ssh-keyscan 35.226.18.32 173.255.113.195 35.223.136.131 >> /root/.ssh/known_hosts
 ansible-playbook -i inventory.gcp.yml -u gce playbook.yml
 
 # Install Hadoop

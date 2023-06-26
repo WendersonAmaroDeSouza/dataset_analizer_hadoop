@@ -143,3 +143,67 @@ Coletar a saída do HDFS
 hdfs dfs -get output output
 cat output/*
 ```
+
+# Twitter Sentiments
+
+## Descubra os sentimentos de cada palavra bom base em Twitters
+
+### Terraform
+
+- Inicie o Terraform
+
+```shell 
+/lab-hadoop/terraform/terraform init 
+``` 
+
+- Verifique o que será aplicado no ambiente remoto
+
+```shell 
+/lab-hadoop/terraform/terraform plan
+``` 
+
+- Aplique ao ambiênte remoto
+
+```shell 
+/lab-hadoop/terraform/terraform apply
+``` 
+
+### Ansible
+
+- Aplique as tasks do Ansible ao ambiente remoto
+
+```shell 
+cd /lab-hadoop/terraform/ansible
+/lab-hadoop/ansible/ ansible-playbook -i inventory.gcp.yml -u gce playbook.yml
+``` 
+
+### GCP
+
+- Executar o mapper-reducer-job para verificar o sentimento médio de cada palavra com base nos Twitter no dataset
+
+```shell 
+$HADOOP_HOME/bin/hdfs dfs -mkdir /in
+``` 
+
+```shell 
+$HADOOP_HOME/bin/hdfs dfs -mkdir /out
+``` 
+
+- Carregar o dataset no hdfs
+
+```shell 
+$HADOOP_HOME/bin/hdfs dfs -put /home/hadoop/twitter_dataset.csv /in 
+``` 
+
+- Para analizar as palavras do dataset execute o mapper reducer job da seguinte maneira
+
+```shell 
+$HADOOP_HOME/bin/mapred streaming -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /user/hadoop/input -output /user/hadoop/output 
+``` 
+
+- Para realizar o download da saída do Mapreduce
+
+```shell 
+$HADOOP_HOME/bin/hdfs dfs -get /user/hadoop/output 
+``` 
+ 
