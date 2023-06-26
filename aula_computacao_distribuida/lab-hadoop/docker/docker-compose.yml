@@ -6,7 +6,7 @@ services:
       context: .
       target: 'develop-stage'
     ports:
-    - '3001:3000'
+    - '8000:8000'
     volumes:
     - '../.:/root/lab-hadoop'
     - 'C:/Users/wende/.ssh:/root/.ssh'
@@ -18,8 +18,8 @@ services:
     command: bash -c "cd terraform && /bin/bash" # && terraform init && terraform plan && terraform apply && /bin/bash" # && if [ -d "./tmp/pids" ]; then rm -f ./tmp/pids/*; fi && service redis-server start && rails s -b 0.0.0.0 && /bin/bash"
     stdin_open: true
     tty: true
-    networks:
-      - default
-networks:
-  defualt:
-    driver: bridge
+#     networks:
+#       - default
+# networks:
+#   default:
+#     driver: bridge
