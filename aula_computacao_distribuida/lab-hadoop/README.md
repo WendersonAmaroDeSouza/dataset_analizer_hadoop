@@ -235,7 +235,7 @@ cd root/lab-hadoop/dataset-analizer
 python3 job_executor.py
 ```
 
-Ao executar as seguintes ações serão disparadas
+Ao executar o `job_executor.py` terá as saídas similar as a seguir para cada ação descrita
 
 ```shell
   Remote Temp Directory: ./
