@@ -237,7 +237,22 @@ python3 job_executor.py
 
 Ao executar as seguintes ações serão disparadas
 
-  - 
+```shell
+  Remote Temp Directory: ./
+  dos2unix: converting file mapper_reducer_jobs/word_sentiment/mapper.py to Unix format... # Convertendo o formato do arquivo mapper.py de DOS para Unix
+  Converted mapper_reducer_jobs/word_sentiment/mapper.py from DOS to Unix format # Nessa etapa o arquivo já foi convertido e transferido para o NameNode
+  Remote Temp Directory: ./
+  dos2unix: converting file mapper_reducer_jobs/word_sentiment/reducer.py to Unix format... # Convertendo o formato do arquivo reducer.py de DOS para Unix
+  Converted mapper_reducer_jobs/word_sentiment/reducer.py from DOS to Unix format # Nessa etapa o arquivo já foi convertido e transferido para o NameNode
+  Remote Temp Directory: /tmp/upload/1687763581.854030641981415817291210172387455115951757539
+  dos2unix: converting file /root/lab-hadoop/twitter_dataset.csv to Unix format... # Convertendo o formato do arquivo de dataset de DOS para Unix
+  Converted /root/lab-hadoop/twitter_dataset.csv from DOS to Unix format # Nessa etapa o arquivo já foi convertido e transferido para o NameNode
+  Copy /root/lab-hadoop/twitter_dataset.csv to /input hdfs path # Carredado o arquivo de dataset para o hdfs
+  Hdfs Command: mapred streaming -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /input -output /output # Executando o comando Hadoop para executar o mapper reduccer job
+  Remote Temp Directory: /tmp/download/1687763775.031361195688524787027892757279975941300465174 # Nessa estapa já foi finalizado o mapper reducer job e a saída foi guardada em um diretório temporário
+  Okayy
+  Copy /output hdfs path to output # A saída do mapper reducer job foi transferida do hdfs para o diretório local selecionado pelo usuário
+```
 
 ### GCP
 
