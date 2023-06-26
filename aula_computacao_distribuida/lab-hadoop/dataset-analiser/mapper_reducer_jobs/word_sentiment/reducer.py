@@ -17,11 +17,11 @@ for line in sys.stdin:
     else:
         if currently_word:
             currently_sentiment_rate = currently_sentiment_sum / currently_count
-            print('{0};{1}'.format(currently_word, currently_sentiment_rate))
+            print('{0};{1};{2}'.format(currently_word, currently_count, currently_sentiment_rate))
         currently_word = word
         currently_sentiment_sum = sentiment
         currently_count = count
 
 if currently_word:
     currently_sentiment_rate = currently_sentiment_sum / currently_count
-    print('{0};{1}'.format(currently_word, currently_sentiment_rate))
+    print('{0};{1};{2}'.format(currently_word, currently_count, currently_sentiment_rate))

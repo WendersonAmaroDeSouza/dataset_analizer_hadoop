@@ -20,7 +20,7 @@ class HadoopClient(BaseHadoopClient):
         remote_dir = f'/tmp/upload/{time.time()}{random.getrandbits(128)}'
         self.upload(local_path, remote_dir)
         self.exec_hdfs_command(f'hadoop fs -moveFromLocal {remote_dir}/{os.path.basename(local_path)} {hdfs_path}')
-        # self.exec_command(f'rm -R {remote_dir}')
+        self.exec_command(f'rm -R {remote_dir}')
         print(f'Copy {local_path} to {hdfs_path} hdfs path')
     
     def download_from_hdfs(self, hdfs_path, local_path):

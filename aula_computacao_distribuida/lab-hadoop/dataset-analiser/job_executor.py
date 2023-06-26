@@ -54,5 +54,5 @@ def test_mapper_reducer_job(job_name, dataset_path, output_path):
     if error:
         print("Erro:", error.decode())
 
-exec_mapper_reducer_job('word_counter', '/root/lab-hadoop/twitter_dataset.csv', 'output')
+exec_mapper_reducer_job('word_sentiment', '/root/lab-hadoop/twitter_dataset.csv', 'output')
 # test_mapper_reducer_job('word_sentiment', '/root/lab-hadoop/twitter_dataset.csv', 'output')
