@@ -12,7 +12,7 @@ Dessa forma, os usuários podem consumir os dados via API do Django, obtendo inf
 
 O projeto é uma solução abrangente que combina tecnologias de nuvem, processamento distribuído, processamento de dados, análise de sentimentos e desenvolvimento web para oferecer uma plataforma completa de análise de dados de tweets com foco na avaliação de sentimentos.
 
-Laboratório básico para a ferramenta [Hadoop](http://hadoop.org/) provisionado no Google Cloud Platform - GCP
+Exemplo de uso básico da ferramenta [Hadoop](http://hadoop.org/) provisionado no Google Cloud Platform - GCP
 
 ## Web Interfaces
 
